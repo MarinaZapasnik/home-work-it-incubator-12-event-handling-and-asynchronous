@@ -5,7 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    }
+    
+    .item {
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    }
+    
+    .done {
+    font-weight: 600; /* Делает текст более жирным, подчеркивая статус "пройдено" */
+    }
+    
+    .done::after {
+    content: "✅"; /* Добавляет знак галочки после текста элемента */
+    font-size: 13px;
+    margin-left: 5px;
+    }
+</style>
 <body>
+    <h1 class="title">Содержание нашего курса 📚</h1>
+    <button id="reset-button">Сброс ✖</button>
+    <ol class="list">
+        <li class="item">Введение в JavaScript</li>
+        <li class="item">Операторы, сравнение, ветвление</li>
+        <li class="item">Функции</li>
+        <li class="item">Массивы</li>
+        <li class="item">Объекты</li>
+        <li class="item">Взаимодействие с DOM</li>
+        <li class="item">Типы данных</li>
+        <li class="item">Обработка событий, асинхронность</li>
+        <li class="item">Продвинутая работа с функциями</li>
+        <li class="item">Паттерн MVC</li>
+    </ol>
+    
+    <form class="form">
+        <input class="input" />
+        <button type="submit" class="button">Добавить ➕</button>
+    </form>
     <script src="main.js"></script>
 </body>
 </html>
